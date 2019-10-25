@@ -1,4 +1,6 @@
-export class CreatePostDto {
-    readonly content: string;
-    readonly sourceUrl: string;
+export interface CreatePostDto {
+  readonly content: string;
+  readonly sourceUrl: string;
+  createdDate: number;
+  score: number;
 }
