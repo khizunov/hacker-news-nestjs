@@ -10,7 +10,7 @@ export class PostsController {
 
   @Post()
   async create(@Body() createPostDto: CreatePostDto) {
-    this.postsService.create(createPostDto);
+    return this.postsService.create(createPostDto);
   }
 
   @Get()
@@ -20,7 +20,7 @@ export class PostsController {
 
   @Delete(':id')
   async delete(@Param('id') id: string) {
-    await this.postsService.delete(id);
+    return await this.postsService.delete(id);
   }
 
   @Post(':id')

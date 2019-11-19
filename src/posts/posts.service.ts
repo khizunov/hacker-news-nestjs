@@ -20,7 +20,7 @@ export class PostsService {
     }
 
     async delete(id: string) {
-        await this.postModel.findByIdAndRemove(id);
+        return await this.postModel.findByIdAndRemove(id);
     }
 
     async vote(id: string, vote: Vote) {
